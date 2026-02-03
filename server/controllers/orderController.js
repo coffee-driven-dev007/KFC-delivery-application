@@ -6,8 +6,8 @@ import User from "../models/User.js"
 // Place Order COD : /api/order/cod
 export const placeOrderCOD = async (req, res) => {
     try {
-        if (!req.body) req.body = {}
-        const { userId, items, address } = req.body
+        const { items, address } = req.body
+
         if (!address || !items || items.length === 0) {
             return res.json({ success: false, message: 'Invalid data' })
         }
@@ -21,26 +21,26 @@ export const placeOrderCOD = async (req, res) => {
             amount += product.offerPrice * item.quantity
         }
 
-        // Add 2% tax, rounded down
         amount += Math.floor(amount * 0.02)
 
         await Order.create({
-            userId,
+            userId: req.userId,
             items,
             amount,
             address,
             paymentType: 'COD'
         })
 
-        return res.json({ success: true, message: 'Order Placed Successfully', amount })
+        res.json({ success: true, message: 'Order Placed Successfully', amount })
     } catch (error) {
-        return res.json({ success: false, message: error.message })
+        res.json({ success: false, message: error.message })
     }
 }
 
+
 export const placeOrderStripe = async (req, res) => {
     try {
-        const { userId, items, address } = req.body
+        const { items, address } = req.body
         const { origin } = req.headers
 
         if (!address || !items || items.length === 0) {
@@ -65,13 +65,10 @@ export const placeOrderStripe = async (req, res) => {
             amount += product.offerPrice * item.quantity
         }
 
-        // ❌ Remove global tax (we'll add it in Stripe instead)
-        // amount += Math.floor(amount * 0.02)
-
         const order = await Order.create({
-            userId,
+            userId: req.userId,
             items,
-            amount, // subtotal (without tax)
+            amount,
             address,
             paymentType: 'Online',
             status: 'Pending'
@@ -79,11 +76,11 @@ export const placeOrderStripe = async (req, res) => {
 
         const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
 
-        const line_items = productData.map((item) => ({
+        const line_items = productData.map(item => ({
             price_data: {
                 currency: 'usd',
                 product_data: { name: item.name },
-                unit_amount: Math.round(item.price * 1.02 * 100), // add 2% tax per item
+                unit_amount: Math.round(item.price * 1.02 * 100),
             },
             quantity: item.quantity,
         }))
@@ -95,16 +92,16 @@ export const placeOrderStripe = async (req, res) => {
             cancel_url: `${origin}/cart`,
             metadata: {
                 orderId: order._id.toString(),
-                userId,
+                userId: req.userId, // OK here (internal use)
             }
         })
 
-        return res.json({ success: true, url: session.url })
+        res.json({ success: true, url: session.url })
     } catch (error) {
-        console.error("Stripe error:", error)
-        return res.json({ success: false, message: error.message })
+        res.json({ success: false, message: error.message })
     }
 }
+
 
 
 // Stripe Webhooks to verify payments actions : /stripe
@@ -172,17 +169,19 @@ export const stripeWebhooks = async (request, response) => {
 // Get Orders by User ID : /api/order/user
 export const getUserOrders = async (req, res) => {
     try {
-        const { userId } = req.body;
         const orders = await Order.find({
-            userId,
+            userId: req.userId,
             $or: [{ paymentType: 'COD' }, { isPaid: true }]
-        }).populate('items.product address').sort({ createdAt: -1 })
+        })
+            .populate('items.product address')
+            .sort({ createdAt: -1 })
+
         res.json({ success: true, orders })
-        console.log(orders)
     } catch (error) {
         res.json({ success: false, message: error.message })
     }
 }
+
 
 // Get All Orders for Admin: /api/order/admin
 export const getAllOrders = async (req, res) => {

@@ -13,24 +13,31 @@ import orderRouter from './routes/orderRoute.js'
 import { stripeWebhooks } from './controllers/orderController.js'
 
 const app = express()
-
 const port = process.env.PORT || 4000
 
 await connectDB()
 await connectCloudinary()
 
+const allowedOrigins = [
+    'http://localhost:5173',
+    'https://kfc-delivery-application.vercel.app'
+]
 
-const allowedOrigins = ['http://localhost:5173']
-
+// Stripe webhook (RAW body)
 app.post('/stripe', express.raw({ type: 'application/json' }), stripeWebhooks)
 
-
-// Middleware Configuration
+// Middleware
 app.use(express.json())
 app.use(cookieParser())
-app.use(cors({ origin: allowedOrigins, credentials: true }))
+app.use(
+    cors({
+        origin: allowedOrigins,
+        credentials: true
+    })
+)
 
 app.get('/', (req, res) => res.send('API is Working'))
+
 app.use('/api/user', userRouter)
 app.use('/api/admin', adminRouter)
 app.use('/api/product', productRouter)
@@ -39,5 +46,5 @@ app.use('/api/address', addressRouter)
 app.use('/api/order', orderRouter)
 
 app.listen(port, () => {
-    console.log(`Server is Running on http://localhost:${port}`)
+    console.log(`Server running on port ${port}`)
 })
