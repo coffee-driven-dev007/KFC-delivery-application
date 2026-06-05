@@ -1,89 +1,141 @@
 # 🍗 KFC Delivery Application
 
-> A full-stack MERN food delivery platform inspired by modern restaurant ordering systems, featuring responsive design, cart management, order processing, and scalable backend architecture.
+<p align="center">
+  <img src="./assets/banner.png" alt="KFC Delivery Application Banner"/>
+</p>
 
-![Status](https://img.shields.io/badge/Status-Completed-success)
-![React](https://img.shields.io/badge/Frontend-React-blue)
-![Node.js](https://img.shields.io/badge/Backend-Node.js-green)
-![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+<p align="center">
+  <strong>A Full-Stack MERN Food Delivery Platform</strong>
+</p>
 
----
+<p align="center">
+  Inspired by modern food delivery systems, built with scalability, usability, and real-world software engineering principles in mind.
+</p>
 
-## 🚀 Overview
-
-The KFC Delivery Application is a full-stack web application that simulates a real-world food delivery experience. Customers can browse menu items, manage their cart, place orders, and enjoy a responsive experience across desktop and mobile devices.
-
-The project was built to explore production-grade application development using the MERN stack while focusing on API design, state management, database integration, and deployment.
-
-### Live Application
-
-🌐 Frontend: https://kfc-delivery-application.vercel.app
-
-⚡ Backend API: https://kfc-delivery-application-server.vercel.app
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Live-success" />
+  <img src="https://img.shields.io/badge/Frontend-React-blue" />
+  <img src="https://img.shields.io/badge/Backend-Node.js-green" />
+  <img src="https://img.shields.io/badge/Database-MongoDB-brightgreen" />
+  <img src="https://img.shields.io/badge/Deployment-Vercel-black" />
+</p>
 
 ---
 
-## 📸 Preview
+## 🚀 Live Demo
 
-### Home Page
+### Frontend
 
-Add screenshot here
+https://kfc-delivery-application.vercel.app
 
-### Menu & Ordering
+### Backend API
 
-Add screenshot here
+https://kfc-delivery-application-server.vercel.app
 
-### Mobile Experience
+---
 
-Add screenshot here
+## 📖 Overview
+
+The KFC Delivery Application is a full-stack food ordering platform that replicates the core functionality of modern restaurant delivery services.
+
+Users can browse menu items, manage their shopping cart, place orders, and interact with a responsive user interface optimized for both desktop and mobile devices.
+
+The project was designed to strengthen my understanding of production-grade web application development using the MERN stack while focusing on API architecture, database integration, component-driven design, and deployment workflows.
+
+---
+
+## 🎯 Why I Built This
+
+Food delivery platforms handle complex interactions between users, menus, orders, and databases.
+
+I built this project to gain hands-on experience solving challenges commonly found in real-world applications, including:
+
+* Frontend and backend integration
+* RESTful API development
+* Database modeling and persistence
+* Responsive user interface design
+* Production deployment workflows
+* State management and asynchronous operations
+
+The goal was not simply to build another CRUD application, but to understand how scalable food delivery systems are structured and maintained.
 
 ---
 
 ## ✨ Key Features
 
-### Customer Experience
+### Customer Features
 
-* Browse available menu items
+* Browse food categories and menu items
 * View detailed product information
-* Add and remove items from cart
+* Add items to cart
+* Remove items from cart
 * Update item quantities
-* Place food orders
-* Responsive mobile-first design
-* Fast and intuitive user experience
+* Place orders
+* Responsive mobile-first experience
+* Fast and intuitive navigation
 
 ### Application Features
 
 * RESTful API architecture
-* MongoDB data persistence
+* MongoDB database integration
 * Dynamic menu rendering
-* State management across components
+* Component-based frontend architecture
 * Error handling and validation
-* Production deployment with Vercel
+* Production deployment
+* Scalable backend structure
+
+---
+
+## 📸 Application Preview
+
+### 🏠 Home Page
+
+<img src="./assets/home-page.png" alt="Home Page"/>
+
+### 🍔 Menu & Ordering Experience
+
+<img src="./assets/menu-page.png" alt="Menu Page"/>
+
+### 🛒 Shopping Cart
+
+<img src="./assets/cart-page.png" alt="Cart Page"/>
+
+### 📱 Mobile Experience
+
+<img src="./assets/mobile-view.png" alt="Mobile View"/>
 
 ---
 
 ## 🏗️ System Architecture
 
 ```text
-┌───────────────┐
-│ React Client  │
-└───────┬───────┘
-        │ HTTP Requests
-        ▼
-┌───────────────┐
-│ Express API   │
-└───────┬───────┘
-        │
-        ▼
-┌───────────────┐
-│ MongoDB       │
-└───────────────┘
+┌─────────────────────┐
+│     React Client    │
+└──────────┬──────────┘
+           │
+           │ HTTP Requests
+           ▼
+┌─────────────────────┐
+│     Express API     │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│      MongoDB        │
+└─────────────────────┘
 ```
+
+### Application Flow
+
+1. User interacts with the React frontend.
+2. Frontend sends requests to the Express API.
+3. API processes requests and communicates with MongoDB.
+4. Data is returned to the frontend.
+5. UI updates dynamically based on user actions.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
 ### Frontend
 
@@ -99,10 +151,16 @@ Add screenshot here
 * MongoDB
 * Mongoose
 
+### Development Tools
+
+* Git
+* GitHub
+* VS Code
+
 ### Deployment
 
 * Vercel
-* GitHub
+* MongoDB Atlas
 
 ---
 
@@ -112,16 +170,24 @@ Add screenshot here
 KFC-delivery-application
 │
 ├── client
-│   ├── src
 │   ├── public
+│   ├── src
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── hooks
+│   │   └── services
+│   │
 │   └── package.json
 │
 ├── server
 │   ├── controllers
-│   ├── routes
-│   ├── models
 │   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── config
 │   └── package.json
+│
+├── assets
 │
 └── README.md
 ```
@@ -130,22 +196,28 @@ KFC-delivery-application
 
 ## ⚙️ Installation
 
-### Clone Repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/coffee-driven-dev007/KFC-delivery-application.git
 ```
 
-### Install Dependencies
+### Navigate into the Project
 
 ```bash
 cd KFC-delivery-application
+```
 
-# Frontend
+### Install Frontend Dependencies
+
+```bash
 cd client
 npm install
+```
 
-# Backend
+### Install Backend Dependencies
+
+```bash
 cd ../server
 npm install
 ```
@@ -161,14 +233,14 @@ PORT=5000
 
 MONGODB_URI=your_mongodb_connection_string
 
-JWT_SECRET=your_jwt_secret
+JWT_SECRET=your_secret_key
 ```
 
 ---
 
-## ▶️ Running Locally
+## ▶️ Running the Application Locally
 
-### Start Backend
+### Start Backend Server
 
 ```bash
 cd server
@@ -182,12 +254,14 @@ cd client
 npm start
 ```
 
-Application runs on:
+Application URLs:
 
 ```text
-Frontend: http://localhost:3000
+Frontend:
+http://localhost:3000
 
-Backend: http://localhost:5000
+Backend:
+http://localhost:5000
 ```
 
 ---
@@ -200,7 +274,7 @@ Backend: http://localhost:5000
 GET /api/menu
 ```
 
-Retrieve all menu items.
+Returns all available menu items.
 
 ### Orders
 
@@ -208,52 +282,65 @@ Retrieve all menu items.
 POST /api/orders
 ```
 
-Create a new order.
+Creates a new order.
 
 ```http
 GET /api/orders
 ```
 
-Retrieve all orders.
+Retrieves all orders.
 
 ---
 
 ## 🚧 Challenges Solved
 
-During development, several real-world challenges were addressed:
+During development, I encountered and solved several real-world engineering challenges:
 
-* Managing frontend and backend communication efficiently
-* Structuring a scalable Express API
-* Designing reusable React components
-* Handling asynchronous data fetching
-* Creating a responsive experience across devices
-* Deploying separate frontend and backend services
+### Frontend & Backend Integration
 
----
+Implemented reliable communication between the React client and Express server while handling asynchronous requests efficiently.
 
-## 📈 Future Improvements
+### Database Management
 
-* User Authentication
-* Online Payments Integration
-* Real-Time Order Tracking
-* Admin Dashboard
-* Push Notifications
-* Delivery Driver Module
-* Order Analytics
+Designed MongoDB schemas capable of supporting menu management and order processing.
+
+### Responsive Design
+
+Built a mobile-friendly user interface that adapts seamlessly across screen sizes.
+
+### Deployment
+
+Successfully deployed both frontend and backend services while managing environment variables and production configurations.
 
 ---
 
-## 💡 What I Learned
+## 🧠 Engineering Takeaways
 
 This project strengthened my understanding of:
 
 * Full-Stack MERN Development
 * REST API Design
-* MongoDB Data Modeling
-* Production Deployment
+* Database Modeling
 * Component-Based Architecture
 * Responsive UI Development
+* Production Deployment
 * Application Scalability Principles
+* Software Engineering Best Practices
+
+---
+
+## 📈 Future Enhancements
+
+Planned improvements include:
+
+* User Authentication & Authorization
+* Secure Payment Integration
+* Real-Time Order Tracking
+* Push Notifications
+* Admin Dashboard
+* Driver Management Module
+* Analytics & Reporting
+* WebSocket-Based Live Updates
 
 ---
 
@@ -261,10 +348,9 @@ This project strengthened my understanding of:
 
 ### James Matsheni
 
-Full-Stack MERN Developer passionate about building scalable systems and solving real-world problems through software.
+Full-Stack MERN Developer focused on building scalable systems, real-time applications, and software that solves real-world problems.
 
-GitHub:
-https://github.com/coffee-driven-dev007
+**GitHub:** https://github.com/coffee-driven-dev007
 
 ---
 
@@ -276,4 +362,4 @@ If you found this project interesting, consider giving it a star. It helps showc
 
 ## 📄 License
 
-MIT License
+This project is licensed under the MIT License.
