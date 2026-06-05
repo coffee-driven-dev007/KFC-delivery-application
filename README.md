@@ -90,19 +90,7 @@ The goal was not simply to build another CRUD application, but to understand how
 
 ### 🏠 Home Page
 
-<img src="./assets/home-page.png" alt="Home Page"/>
-
-### 🍔 Menu & Ordering Experience
-
-<img src="./assets/menu-page.png" alt="Menu Page"/>
-
-### 🛒 Shopping Cart
-
-<img src="./assets/cart-page.png" alt="Cart Page"/>
-
-### 📱 Mobile Experience
-
-<img src="./assets/mobile-view.png" alt="Mobile View"/>
+<img src="./home.png" alt="Home Page"/>
 
 ---
 
