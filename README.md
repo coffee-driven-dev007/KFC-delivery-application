@@ -9,7 +9,16 @@ A Full-Stack MERN Food Delivery Platform
 </h3>
 
 <p align="center">
-Inspired by modern food delivery systems and built using production-grade software engineering practices.
+Built with React, Node.js, Express, and MongoDB.
+</p>
+
+<p align="center">
+  <a href="https://kfc-delivery-application.vercel.app">
+    <img src="https://img.shields.io/badge/🚀_Live_Demo-Visit_App-red?style=for-the-badge" />
+  </a>
+  <a href="https://kfc-delivery-application-server.vercel.app">
+    <img src="https://img.shields.io/badge/⚡_Backend_API-View_API-blue?style=for-the-badge" />
+  </a>
 </p>
 
 <p align="center">
@@ -18,179 +27,100 @@ Inspired by modern food delivery systems and built using production-grade softwa
   <img src="https://img.shields.io/badge/Backend-Node.js-green" />
   <img src="https://img.shields.io/badge/Database-MongoDB-brightgreen" />
   <img src="https://img.shields.io/badge/Deployment-Vercel-black" />
-  <img src="https://img.shields.io/github/stars/coffee-driven-dev007/KFC-delivery-application" />
-  <img src="https://img.shields.io/github/forks/coffee-driven-dev007/KFC-delivery-application" />
 </p>
-
----
-
-## 🚀 Live Demo
-
-### 🌐 Frontend
-
-https://kfc-delivery-application.vercel.app
-
-### ⚡ Backend API
-
-https://kfc-delivery-application-server.vercel.app
 
 ---
 
 ## 📖 Overview
 
-The KFC Delivery Application is a full-stack MERN platform that replicates the experience of ordering food through a modern restaurant delivery service.
+The KFC Delivery Application is a production-style MERN stack application that replicates the experience of ordering food through a modern restaurant delivery platform.
 
-Customers can browse menu items, manage their cart, place orders, and interact with a responsive user interface optimized for desktop, tablet, and mobile devices.
-
-The project focuses on scalable architecture, clean API design, reusable frontend components, and production deployment practices.
+The application demonstrates full-stack development principles including API design, database integration, responsive user interfaces, component-based architecture, and cloud deployment.
 
 ---
 
-## 🎯 Why I Built This
+## ✨ Features
 
-Food delivery applications are excellent examples of real-world systems that require multiple layers of functionality working together seamlessly.
+### Customer Features
 
-I built this project to deepen my understanding of:
+* Browse menu items
+* View product details
+* Add items to cart
+* Update quantities
+* Remove items from cart
+* Place orders
+* Responsive mobile experience
 
-* Full-stack application architecture
-* Frontend and backend integration
-* RESTful API development
-* MongoDB data modelling
-* Responsive user interface design
-* Production deployment workflows
-* Component-driven development
-
-The objective was to move beyond simple CRUD applications and gain experience building software that mirrors real-world customer-facing systems.
-
----
-
-## 📊 Project Highlights
-
-| Feature              | Description                  |
-| -------------------- | ---------------------------- |
-| Architecture         | Full-Stack MERN              |
-| Frontend             | React.js                     |
-| Backend              | Node.js & Express            |
-| Database             | MongoDB                      |
-| Deployment           | Vercel                       |
-| API Style            | RESTful                      |
-| UI                   | Responsive Design            |
-| Development Approach | Component-Based Architecture |
-
----
-
-## ✨ Core Features
-
-### 🍔 Customer Experience
-
-* Browse available menu items
-* View detailed product information
-* Add products to cart
-* Remove products from cart
-* Update item quantities
-* Place food orders
-* Responsive mobile-first design
-* Fast and intuitive navigation
-
-### ⚙️ Application Features
+### Technical Features
 
 * RESTful API architecture
-* MongoDB database integration
-* Dynamic content rendering
-* Component-based frontend architecture
+* MongoDB integration
+* Component-based React architecture
+* Express backend services
 * Error handling and validation
 * Environment variable configuration
-* Production deployment
-* Scalable backend structure
+* Production deployment with Vercel
+
+---
+
+## ⚡ Technology Stack
+
+| Layer           | Technology   |
+| --------------- | ------------ |
+| Frontend        | React.js     |
+| Backend         | Node.js      |
+| Framework       | Express.js   |
+| Database        | MongoDB      |
+| ODM             | Mongoose     |
+| HTTP Client     | Axios        |
+| Deployment      | Vercel       |
+| Version Control | Git & GitHub |
 
 ---
 
 ## 📸 Application Preview
 
-### 🏠 Home Page
+<h3 align="center">🏠 Home Page</h3>
 
 <p align="center">
-  <img src="./assets/home.png" width="100%" alt="Home Page"/>
-</p>
-
-### 🍗 Menu Experience
-
-<p align="center">
-  <img src="./assets/menu.png" width="100%" alt="Menu Page"/>
-</p>
-
-### 🛒 Shopping Cart
-
-<p align="center">
-  <img src="./assets/cart.png" width="100%" alt="Cart Page"/>
-</p>
-
-### 📱 Mobile Experience
-
-<p align="center">
-  <img src="./assets/mobile.png" width="300" alt="Mobile View"/>
+  <img src="./home.png" width="900" alt="Home Page"/>
 </p>
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ Architecture
 
 ```text
-┌─────────────────────┐
-│     React Client    │
-└──────────┬──────────┘
-           │
-           │ HTTP Requests
-           ▼
-┌─────────────────────┐
-│     Express API     │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│      MongoDB        │
-└─────────────────────┘
+React Client
+     │
+     ▼
+Express API
+     │
+     ▼
+MongoDB Database
 ```
 
 ### Request Flow
 
-1. User interacts with the React frontend.
-2. React sends API requests to the Express server.
-3. Express processes requests and communicates with MongoDB.
-4. Database responses are returned to the API.
-5. The frontend updates dynamically based on returned data.
+1. User interacts with the React application.
+2. Frontend sends requests to the Express API.
+3. API processes business logic.
+4. MongoDB stores and retrieves data.
+5. Updated data is returned to the user interface.
 
 ---
 
-## 🛠️ Technology Stack
+## 🎓 Skills Demonstrated
 
-### Frontend
-
-```text
-React.js
-JavaScript (ES6+)
-CSS3
-Axios
-```
-
-### Backend
-
-```text
-Node.js
-Express.js
-MongoDB
-Mongoose
-```
-
-### Deployment & Tools
-
-```text
-Vercel
-MongoDB Atlas
-Git
-GitHub
-VS Code
-```
+* Full-Stack Development
+* REST API Design
+* Database Modelling
+* Responsive Design
+* State Management
+* Production Deployment
+* Software Architecture
+* Component-Based Development
+* Problem Solving
 
 ---
 
@@ -200,31 +130,8 @@ VS Code
 KFC-delivery-application
 │
 ├── assets
-│   ├── banner.png
-│   ├── home.png
-│   ├── menu.png
-│   ├── cart.png
-│   └── mobile.png
-│
 ├── client
-│   ├── public
-│   ├── src
-│   │   ├── components
-│   │   ├── pages
-│   │   ├── hooks
-│   │   ├── services
-│   │   └── utils
-│   │
-│   └── package.json
-│
 ├── server
-│   ├── controllers
-│   ├── routes
-│   ├── models
-│   ├── middleware
-│   ├── config
-│   └── package.json
-│
 └── README.md
 ```
 
@@ -232,28 +139,16 @@ KFC-delivery-application
 
 ## ⚙️ Installation
 
-### Clone Repository
-
 ```bash
 git clone https://github.com/coffee-driven-dev007/KFC-delivery-application.git
-```
 
-### Navigate Into Project
-
-```bash
 cd KFC-delivery-application
-```
 
-### Install Frontend Dependencies
-
-```bash
+# Frontend
 cd client
 npm install
-```
 
-### Install Backend Dependencies
-
-```bash
+# Backend
 cd ../server
 npm install
 ```
@@ -261,8 +156,6 @@ npm install
 ---
 
 ## 🔐 Environment Variables
-
-Create a `.env` file inside the server folder:
 
 ```env
 PORT=5000
@@ -274,110 +167,53 @@ JWT_SECRET=your_secret_key
 
 ---
 
-## ▶️ Running Locally
+## ▶️ Run Locally
 
-### Start Backend
+### Backend
 
 ```bash
 cd server
 npm run dev
 ```
 
-### Start Frontend
+### Frontend
 
 ```bash
 cd client
 npm start
 ```
 
-Application URLs:
-
-```text
-Frontend:
-http://localhost:3000
-
-Backend:
-http://localhost:5000
-```
-
 ---
 
-## 📡 API Endpoints
+## 🚧 Engineering Challenges
 
-### Menu Routes
+### Frontend & Backend Integration
 
-```http
-GET /api/menu
-```
-
-Returns all available menu items.
-
----
-
-### Order Routes
-
-```http
-POST /api/orders
-```
-
-Creates a new customer order.
-
-```http
-GET /api/orders
-```
-
-Retrieves all orders.
-
----
-
-## 🚧 Engineering Challenges Solved
-
-### Frontend & Backend Communication
-
-Designed reliable communication between the React client and Express server using asynchronous API requests.
+Implemented asynchronous communication between React and Express while maintaining clean separation of concerns.
 
 ### Database Design
 
-Created MongoDB schemas capable of managing menu items and customer orders efficiently.
+Designed MongoDB schemas to support menu management and order processing workflows.
 
-### Responsive User Experience
+### Responsive Design
 
-Developed a mobile-friendly interface that maintains usability across multiple screen sizes.
+Built a consistent user experience across desktop, tablet, and mobile devices.
 
-### Deployment Strategy
+### Deployment
 
-Configured and deployed frontend and backend services while managing environment variables and production settings.
-
----
-
-## 🧠 Key Takeaways
-
-This project strengthened my understanding of:
-
-* Full-Stack MERN Development
-* REST API Design
-* Database Modelling
-* Scalable Application Architecture
-* Component-Based Development
-* Responsive Design Principles
-* Production Deployment
-* Software Engineering Best Practices
+Configured and deployed frontend and backend services while managing production environment variables.
 
 ---
 
-## 📈 Future Enhancements
-
-Planned improvements include:
+## 📈 Future Improvements
 
 * Authentication & Authorization
-* Online Payment Integration
+* Online Payments
 * Real-Time Order Tracking
-* WebSocket-Based Updates
 * Push Notifications
 * Admin Dashboard
-* Driver Management System
+* Driver Management
 * Analytics & Reporting
-* Order History Management
 
 ---
 
@@ -385,24 +221,24 @@ Planned improvements include:
 
 ### James Matsheni
 
-Full-Stack MERN Developer passionate about building scalable systems, real-time applications, and software that solves real-world problems.
+Full-Stack MERN Developer focused on building scalable systems and solving real-world problems through software.
 
-**GitHub:** https://github.com/coffee-driven-dev007
+GitHub: https://github.com/coffee-driven-dev007
 
 ---
 
 ## ⭐ Support
 
-If you found this project useful or interesting, consider giving it a star. It helps increase visibility and supports future development.
+If you found this project interesting, consider starring the repository.
 
 ---
 
 ## 📄 License
 
-Licensed under the MIT License.
+MIT License
 
 ---
 
 <p align="center">
-Built with ❤️ using React, Node.js, Express, and MongoDB.
+Built with ❤️ by James Matsheni
 </p>
