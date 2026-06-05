@@ -1,9 +1,5 @@
 # 🍗 KFC Delivery Application
 
-<p align="center">
-  <img src="./assets/banner.png" width="100%" alt="KFC Delivery Application Banner"/>
-</p>
-
 <h3 align="center">
 A Full-Stack MERN Food Delivery Platform
 </h3>
